@@ -113,7 +113,7 @@ export default function Board() {
         y: pointerPos.y,
         width: GOAL_WIDTH_PX, 
         height: postThickness,
-        color: "white", // 👈 Arco ahora es blanco
+        color: "white",
       };
     }
 
@@ -125,7 +125,7 @@ export default function Board() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* El título se ha eliminado para corregir la duplicación */}
+      {/* <h1>Tablero Táctico - Futsal</h1> - Asumiendo que está en el componente padre */}
 
       <div className="flex gap-2 mb-3 flex-wrap justify-center p-2 bg-gray-100 rounded-lg shadow-md">
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={() => (window.selectedTool = "blue")}>Jugador Azul</button>
@@ -248,6 +248,12 @@ export default function Board() {
           })}
         </Layer>
       </Stage>
+      
+      {/* 💡 PIE DE PÁGINA ACTUALIZADO con etiqueta <strong> */}
+      <footer className="mt-6 p-3 text-sm text-gray-600 border-t border-gray-300 w-full text-center">
+        &copy; {new Date().getFullYear()} Creado por <strong>José Gatti</strong>. Todos los derechos reservados.
+      </footer>
+      
     </div>
   );
 }
