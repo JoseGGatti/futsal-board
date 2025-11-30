@@ -1,4 +1,4 @@
-import Board from "../components/Board";
+import Board from "futsal-board/components/Board.js";
 
 export default function Home() {
   return (
